@@ -75,6 +75,7 @@ static NSString * const DIFFUSEKEY = @"diffuse";
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
     if ([anim isKindOfClass:[CAAnimationGroup class]] && flag) {
+        [self removeAllAnimations];
         [self removeFromSuperlayer];
     }
 }

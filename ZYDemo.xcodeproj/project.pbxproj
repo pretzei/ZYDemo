@@ -18,6 +18,10 @@
 		DE0D2E091DABB45200C6417B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0D2E081DABB45200C6417B /* OpenGLES.framework */; };
 		DE5A7F6D1DE84D8F00C15E48 /* WIPulseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5A7F6C1DE84D8F00C15E48 /* WIPulseLayer.m */; };
 		DE5A7F701DE84E4A00C15E48 /* WIPulseLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5A7F6F1DE84E4A00C15E48 /* WIPulseLayerViewController.m */; };
+		DE5A7F741DE9D0A800C15E48 /* UIView+BoomAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5A7F731DE9D0A800C15E48 /* UIView+BoomAddition.m */; };
+		DE5A7F771DE9D17500C15E48 /* UIImage+BoomAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5A7F761DE9D17500C15E48 /* UIImage+BoomAddition.m */; };
+		DE5A7F7A1DE9EDFC00C15E48 /* ZYBoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5A7F791DE9EDFC00C15E48 /* ZYBoomViewController.m */; };
+		DE5A7F7D1DEAE2C600C15E48 /* WIBoomLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5A7F7C1DEAE2C600C15E48 /* WIBoomLayer.m */; };
 		DEC1DB4F1DC1B80600B397EF /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC1DB411DC1B80600B397EF /* GLProgram.m */; };
 		DEC1DB501DC1B80600B397EF /* dm-1050-1.png in Resources */ = {isa = PBXBuildFile; fileRef = DEC1DB431DC1B80600B397EF /* dm-1050-1.png */; };
 		DEC1DB511DC1B80600B397EF /* Particle.png in Resources */ = {isa = PBXBuildFile; fileRef = DEC1DB441DC1B80600B397EF /* Particle.png */; };
@@ -72,6 +76,14 @@
 		DE5A7F6C1DE84D8F00C15E48 /* WIPulseLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIPulseLayer.m; sourceTree = "<group>"; };
 		DE5A7F6E1DE84E4A00C15E48 /* WIPulseLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIPulseLayerViewController.h; sourceTree = "<group>"; };
 		DE5A7F6F1DE84E4A00C15E48 /* WIPulseLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIPulseLayerViewController.m; sourceTree = "<group>"; };
+		DE5A7F721DE9D0A800C15E48 /* UIView+BoomAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BoomAddition.h"; sourceTree = "<group>"; };
+		DE5A7F731DE9D0A800C15E48 /* UIView+BoomAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BoomAddition.m"; sourceTree = "<group>"; };
+		DE5A7F751DE9D17500C15E48 /* UIImage+BoomAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BoomAddition.h"; sourceTree = "<group>"; };
+		DE5A7F761DE9D17500C15E48 /* UIImage+BoomAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BoomAddition.m"; sourceTree = "<group>"; };
+		DE5A7F781DE9EDFC00C15E48 /* ZYBoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYBoomViewController.h; sourceTree = "<group>"; };
+		DE5A7F791DE9EDFC00C15E48 /* ZYBoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYBoomViewController.m; sourceTree = "<group>"; };
+		DE5A7F7B1DEAE2C600C15E48 /* WIBoomLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIBoomLayer.h; sourceTree = "<group>"; };
+		DE5A7F7C1DEAE2C600C15E48 /* WIBoomLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIBoomLayer.m; sourceTree = "<group>"; };
 		DEC1DB401DC1B80600B397EF /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLProgram.h; sourceTree = "<group>"; };
 		DEC1DB411DC1B80600B397EF /* GLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLProgram.m; sourceTree = "<group>"; };
 		DEC1DB431DC1B80600B397EF /* dm-1050-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dm-1050-1.png"; sourceTree = "<group>"; };
@@ -145,6 +157,7 @@
 		DE0D2DCF1DABB13A00C6417B /* ZYDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DE5A7F711DE9D07C00C15E48 /* WIBoomLayer */,
 				DE5A7F6A1DE84D8F00C15E48 /* WIPulseLayer */,
 				DEF105E61DCB243A00E2749F /* WIBrushView */,
 				DEC1DB3F1DC1B80600B397EF /* WIGLPaintView */,
@@ -163,6 +176,8 @@
 				DEF105E41DCB1E5300E2749F /* ZYBrushViewController.m */,
 				DE5A7F6E1DE84E4A00C15E48 /* WIPulseLayerViewController.h */,
 				DE5A7F6F1DE84E4A00C15E48 /* WIPulseLayerViewController.m */,
+				DE5A7F781DE9EDFC00C15E48 /* ZYBoomViewController.h */,
+				DE5A7F791DE9EDFC00C15E48 /* ZYBoomViewController.m */,
 			);
 			path = ZYDemo;
 			sourceTree = "<group>";
@@ -208,6 +223,19 @@
 				DE5A7F6C1DE84D8F00C15E48 /* WIPulseLayer.m */,
 			);
 			path = WIPulseLayer;
+			sourceTree = "<group>";
+		};
+		DE5A7F711DE9D07C00C15E48 /* WIBoomLayer */ = {
+			isa = PBXGroup;
+			children = (
+				DE5A7F721DE9D0A800C15E48 /* UIView+BoomAddition.h */,
+				DE5A7F731DE9D0A800C15E48 /* UIView+BoomAddition.m */,
+				DE5A7F751DE9D17500C15E48 /* UIImage+BoomAddition.h */,
+				DE5A7F761DE9D17500C15E48 /* UIImage+BoomAddition.m */,
+				DE5A7F7B1DEAE2C600C15E48 /* WIBoomLayer.h */,
+				DE5A7F7C1DEAE2C600C15E48 /* WIBoomLayer.m */,
+			);
+			path = WIBoomLayer;
 			sourceTree = "<group>";
 		};
 		DEC1DB3F1DC1B80600B397EF /* WIGLPaintView */ = {
@@ -396,9 +424,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE5A7F7A1DE9EDFC00C15E48 /* ZYBoomViewController.m in Sources */,
 				DEC1DB5D1DC1D06600B397EF /* WIGLContext.m in Sources */,
+				DE5A7F7D1DEAE2C600C15E48 /* WIBoomLayer.m in Sources */,
+				DE5A7F741DE9D0A800C15E48 /* UIView+BoomAddition.m in Sources */,
 				DEC1DB551DC1B80600B397EF /* UIView+GLAddition.m in Sources */,
 				DEF105E51DCB1E5300E2749F /* ZYBrushViewController.m in Sources */,
+				DE5A7F771DE9D17500C15E48 /* UIImage+BoomAddition.m in Sources */,
 				DE5A7F6D1DE84D8F00C15E48 /* WIPulseLayer.m in Sources */,
 				DEF105E91DCB243A00E2749F /* WIBrushView.m in Sources */,
 				DEC1DB561DC1B80600B397EF /* WIBackView.m in Sources */,

@@ -38,7 +38,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVu-1m-Fyy">
-                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
+                                <rect key="frame" x="165" y="319" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="sAP-Jn-8ZT"/>
@@ -58,10 +58,19 @@
                                     <segue destination="gA1-hf-9gO" kind="show" id="I1W-94-5eT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNM-Ru-yiL">
+                                <rect key="frame" x="164" y="384" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Hhy-q9-Yia" kind="show" id="dHJ-Iy-mf3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dNM-Ru-yiL" firstAttribute="top" secondItem="Ma2-1K-bcN" secondAttribute="bottom" constant="8" id="Atl-79-r6S"/>
                             <constraint firstItem="Ma2-1K-bcN" firstAttribute="centerX" secondItem="TU2-k5-X6c" secondAttribute="centerX" id="DGu-c6-YS0"/>
+                            <constraint firstItem="dNM-Ru-yiL" firstAttribute="centerX" secondItem="TU2-k5-X6c" secondAttribute="centerX" id="FML-OW-vt2"/>
                             <constraint firstItem="Ma2-1K-bcN" firstAttribute="top" secondItem="QZn-vZ-6OA" secondAttribute="bottom" constant="36" id="Jif-LC-5Af"/>
                             <constraint firstItem="FVu-1m-Fyy" firstAttribute="top" secondItem="QZn-vZ-6OA" secondAttribute="bottom" constant="8.5" id="Mty-PT-5Gk"/>
                             <constraint firstItem="FVu-1m-Fyy" firstAttribute="centerY" secondItem="TU2-k5-X6c" secondAttribute="centerY" id="Nfl-QX-WBM"/>
@@ -74,6 +83,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Oz-gb-ckF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-592" y="90"/>
+        </scene>
+        <!--Boom View Controller-->
+        <scene sceneID="my3-cR-qwI">
+            <objects>
+                <viewController id="Hhy-q9-Yia" customClass="ZYBoomViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="787-en-InU"/>
+                        <viewControllerLayoutGuide type="bottom" id="OQF-3n-rXK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b6g-fm-xMr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7g-bG-LrL">
+                                <rect key="frame" x="164" y="359" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonTouch:" destination="Hhy-q9-Yia" eventType="touchUpInside" id="1bo-p5-FV2"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="testImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="kDv-Nx-Omv">
+                                <rect key="frame" x="67" y="192" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="9BI-ur-uhq"/>
+                                    <constraint firstAttribute="width" constant="240" id="L1c-DW-7f4"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kDv-Nx-Omv" firstAttribute="centerX" secondItem="b6g-fm-xMr" secondAttribute="centerX" id="QCb-BB-NPz"/>
+                            <constraint firstItem="kDv-Nx-Omv" firstAttribute="centerY" secondItem="b6g-fm-xMr" secondAttribute="centerY" id="dpt-GK-fgr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="kDv-Nx-Omv" id="fia-jP-kcJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4qC-Wk-pfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1366" y="776"/>
         </scene>
         <!--Pulse Layer View Controller-->
         <scene sceneID="dTB-gY-Ctl">
@@ -157,4 +208,7 @@
             <point key="canvasLocation" x="759" y="124"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="testImage.png" width="1024" height="768"/>
+    </resources>
 </document>
