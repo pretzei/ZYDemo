@@ -21,7 +21,7 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)buttonTouch:(id)sender {
-    [_imageView explodeWithSize:100 point:CGPointZero];
+    [_imageView explodeWithSize:100 point:CGPointMake(_imageView.frame.size.width / 2, _imageView.frame.size.height / 2)];
 }
 
 - (void)didReceiveMemoryWarning {

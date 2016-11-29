@@ -19,12 +19,15 @@
 }
 
 - (UIColor *)pixelColorWithPoint:(CGPoint)point {
-    const UInt8 *data = CFDataGetBytePtr(CGDataProviderCopyData(CGImageGetDataProvider(self.CGImage)));
+    CGDataProviderRef dataProvider = CGImageGetDataProvider(self.CGImage);
+    CFDataRef dataRef = CGDataProviderCopyData(dataProvider);
+    const UInt8 *data = CFDataGetBytePtr(dataRef);
     NSInteger pixelInfo = (NSInteger)((self.size.width * point.y + point.x) * 4);
     CGFloat red = (CGFloat)data[pixelInfo] / 255;
     CGFloat green = (CGFloat)data[pixelInfo + 1] / 255;
     CGFloat blue = (CGFloat)data[pixelInfo + 2] / 255;
     CGFloat alpha = (CGFloat)data[pixelInfo + 3] /255;
+    free((void *)dataRef);
     return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
 

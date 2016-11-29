@@ -30,19 +30,23 @@ static NSString * const kSNAPSHOT = @"WISNAPSHOT";
 }
 
 - (void)explodeWithSize:(CGFloat)size point:(CGPoint)point {
-    NSInteger num = 16;
-    for (NSInteger i = 0; i < num; i++) {
-        for (NSInteger j = 0; j < num; j++) {
-            if (self.snapShot == nil) {
-                self.snapShot = [[self snapshotImage] scaleImageToSize:CGSizeMake(32, 32)];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSInteger num = 16;
+        for (NSInteger i = 0; i < num; i++) {
+            for (NSInteger j = 0; j < num; j++) {
+                if (self.snapShot == nil) {
+                    self.snapShot = [[self snapshotImage] scaleImageToSize:CGSizeMake(32, 32)];
+                }
+                UIColor *color = [self.snapShot pixelColorWithPoint:CGPointMake(i * 2, j * 2)];
+                
+                WIBoomLayer *layer = [[WIBoomLayer alloc] initWithPoint:point size:size color:color perSize:size / num];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.layer addSublayer:layer];
+                    [layer explode];
+                });
             }
-            UIColor *color = [self.snapShot pixelColorWithPoint:CGPointMake(i * 2, j * 2)];
-            
-            WIBoomLayer *layer = [[WIBoomLayer alloc] initWithPoint:point size:size color:color perSize:size / num];
-            [self.layer addSublayer:layer];
-            [layer explode];
         }
-    }
+    });
 }
 
 
